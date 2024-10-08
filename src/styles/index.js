@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
-
+import theme from '../styles/theme';
 //estruturscao do container
 export const Container = styled.View`
     flex: 1;
     flex-direction: ${(props) => props.row ? 'row' : 'column'};
-    background-color: #fff;
+    background: ${(props) => props.color ? theme.colors[props.color] : 'transparent'};
     align-items: center;
     justify-content: ${(props) => props.justify ? props.justify : 'center'};
     width:100%;
@@ -16,3 +16,4 @@ export const Container = styled.View`
     top: ${(props) => props.top ? props.top : '0px'};
     z-index: ${(props) => props.zIndex ? props.zIndex : '1'};
 `;
+
