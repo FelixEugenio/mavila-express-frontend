@@ -17,3 +17,16 @@ export const Container = styled.View`
     z-index: ${(props) => props.zIndex ? props.zIndex : '1'};
 `;
 
+export const Button = styled.TouchableOpacity`
+    width: 100%;
+    padding:${(props) => props.compact ? 5 : 15}px;
+    opacity: ${(props) => props.disabled ? 0.5 : 1};
+    background: ${(props) => props.type ? theme.colors[props.type] : theme.colors.primary };
+    border-radius: 86px;
+`;
+
+export const ButtonText = styled.Text`
+    color: ${(props) => props.color ? theme.colors[props.color] : '#000'};
+    font-size: 16px;
+    text-align: center;
+`;
